@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Vue Example of Reactivity and Data binding</title>
+	<meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css">
+
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+	
+  
+	<div id="message" 
+	:class="{red: color === 'rojo', 
+					 blue: color === 'azul',
+	         green: color === 'verde' }">
+
+   El color seleccionado es 
+
+   <span v-if="color === 'rojo'">Rojo &#128515;</span>
+	 <span v-else-if="color === 'azul'">Azul &#128515;</span>
+	 <span v-else-if="color === 'verde'">Verde &#128515;</span>
+	 <span v-else >Ninguno &#128533; </span>
+	 
+	</div>
+			
+	<input id="textbox" v-model="color"/>
+
+  <div id="buttons">
+	 <button @click="setColor('azul')">Azul</button>
+	 <button @click="setColor('rojo')">Rojo</button>
+	 <button @click="setColor('verde')">Verde</button>
+
+	</div>
+	</div>
+
+	<script >
+
+	const vueApp = new Vue({
+  el: "#app",
+  data: {
+    color: "rojo"
+  },
+	 methods: {
+    setColor: function (newcolor) {
+      this.color = newcolor;
+    }
+	 }
+});
+
+	</script>
+</body>
+
+</html>

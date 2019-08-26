@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+body {
+  background-color: #eeeeee;
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+  padding-top: 50px;
+}
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+#app {
+  margin-top: 50px;
+}
+
+#message {
+  margin-bottom: 25px;
+}
+
+#textbox {
+  width: 95%;
+}
+
+#buttons {
+  margin-top: 25px;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
